@@ -1,0 +1,26 @@
+{
+    "name": "Toast Bell",
+    "version": "0.1",
+    "manifest_version": 2,
+    "description": "Shows off desktop notifications and sounds, which are \"toast\" windows that pop up on the desktop.",
+    "icons": { "16": "src/img/16.png", "48": "src/img/48.png", "128": "src/img/128.png" },
+    "browser_action": {
+        "default_popup": "src/page/popup.html"
+    },
+    "permissions": [
+        "notifications",
+        "activeTab",
+        "alarms",
+        "tabs",
+        "identity",
+        "*://*/*"
+    ],
+    "background": {
+        "scripts": ["src/js/background.js"],
+        "persistent": true
+    },
+    "minimum_chrome_version": "70",
+    "web_accessible_resources": [
+        "src/img/48.png"
+    ]
+}
